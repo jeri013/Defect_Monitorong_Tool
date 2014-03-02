@@ -69,7 +69,7 @@ grails.project.dependency.resolution = {
         compile ':cache:1.0.1'
 		compile ":searchable-0.6.6"
 		
-		compile ':heroku:1.0.1'
-		compile ':cloud-support:1.0.8'
+		//compile ':heroku:1.0.1'
+		//compile ':cloud-support:1.0.8'
     }
 }

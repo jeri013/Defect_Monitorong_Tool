@@ -3,7 +3,7 @@ import defectMonitoring.User;
 class BootStrap {
 
     def init = { servletContext ->
-		def admin = new User(
+	/*	def admin = new User(
 				login:"admin",
 				password:"admin",
 				firstName:"admin",
@@ -36,7 +36,7 @@ class BootStrap {
 	if(user.hasErrors()){
 		println user.errors
 	}
-				 
+		*/		 
     }
 	
     def destroy = {
