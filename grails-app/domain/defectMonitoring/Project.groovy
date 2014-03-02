@@ -2,7 +2,7 @@ package defectMonitoring
 
 class Project {
 
-	static searchable = true
+	static searchable = {except = ['id', 'version']}
 	
 	String projectName
 	String projectDescription

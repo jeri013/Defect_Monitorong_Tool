@@ -82,17 +82,11 @@
 							<g:message code="user.role.label" default="Role" />
 							
 						</label>
-						<g:select name="role" from="${userInstance.constraints.role.inList}" value="${userInstance?.role}" valueMessagePrefix="user.role" noSelection="['': '']"/>
+						<g:select name="role" from="${userInstance.constraints.role.inList}" value="${userInstance?.role}" valueMessagePrefix="user.role" />
 					</div>
 					
-					<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'status', 'error')} ">
-						<%--<label for="status">
-							<g:message code="user.status.label" default="Status" />
-							
-						</label>--%>
-						<%--<g:select name="status" from="${userInstance.constraints.status.inList}" value="${userInstance?.status}" valueMessagePrefix="user.status" noSelection="['': '']"/>--%>
-						<g:hiddenField name="status" value="${userInstance?.status}" />
-					</div>
+					<g:hiddenField name="status" value="${userInstance?.status}" />
+					
                    	</div>
 				</fieldset>
 				<fieldset class="buttons">

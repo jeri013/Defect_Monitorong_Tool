@@ -22,6 +22,7 @@
 					
 						<g:sortableColumn property="login" title="${message(code: 'user.login.label', default: 'Login')}" />
 						<g:sortableColumn property="lastName" title="Name" />
+						<g:sortableColumn property="role" title="${message(code: 'user.role.label', default: 'Role')}" />
 						<g:sortableColumn property="status" title="${message(code: 'user.status.label', default: 'Status')}" />
 						<g:sortableColumn property="blank" title="Action" />
 					
@@ -33,12 +34,14 @@
 						
 						<td>${fieldValue(bean: userInstance, field: "login")}</td>
 						<td>${fieldValue(bean: userInstance, field: "lastName")}, ${fieldValue(bean: userInstance, field: "firstName")} ${fieldValue(bean: userInstance, field: "middleInitial")}</td> 
+						<td>${fieldValue(bean: userInstance, field: "role")}</td>
 						<td>${fieldValue(bean: userInstance, field: "status")}</td>
+						
 						<td>
 							<g:link action="show" id="${userInstance.id}">View</g:link>
 							<g:link class="editStatus" action="editStatus" id="${userInstance?.id}">Edit Status</g:link>
 							<g:link class="editRole" action="editRole" id="${userInstance?.id}">Edit Role</g:link>
-							<g:link class="changePassword" action="changePassword" id="${userInstance?.id}">Reset Password</g:link>
+							<g:link class="resetPassword" action="resetPassword" id="${userInstance?.id}">Reset Password</g:link>
 						</td>
 					
 					</tr>

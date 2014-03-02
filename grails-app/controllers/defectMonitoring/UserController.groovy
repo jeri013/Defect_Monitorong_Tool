@@ -182,6 +182,26 @@ class UserController {
 		}
 	}
 	
+	def resetPassword(Long id) {
+		if(!session.user) {
+			// i.e. user not logged in
+			redirect(controller:'user',action:'login')
+			return false
+		}
+		else
+		{
+			def userInstance = User.get(id)
+			
+			if (!userInstance) {
+				flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), id])
+				redirect(action: "list")
+				return
+			}
+	
+			[userInstance: userInstance]
+		}
+	}
+	
     def edit(Long id) {
 		if(!session.user) {
 			// i.e. user not logged in

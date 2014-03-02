@@ -37,4 +37,9 @@ class User {
 	boolean isAdmin(){
 		return role == "admin"
 	}
+	
+	static mapping = {
+		table 'users'
+		password column: '`password`'
+	 }
 }

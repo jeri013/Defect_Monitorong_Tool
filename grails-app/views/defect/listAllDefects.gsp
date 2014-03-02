@@ -25,11 +25,11 @@
 						
 						<g:sortableColumn property="ticket" title="${message(code: 'defect.ticket.label', default: 'Ticket')}" />
 					
+						<g:sortableColumn property="defectSeverity" title="${message(code: 'defect.defectSeverity.label', default: 'Severity')}" />
+						
 						<g:sortableColumn property="environment" title="${message(code: 'defect.environment.label', default: 'Environment')}" />
 					
 						<g:sortableColumn property="defectStatus" title="${message(code: 'defect.defectStatus.label', default: 'Status')}" />
-					
-						<g:sortableColumn property="defectSeverity" title="${message(code: 'defect.defectSeverity.label', default: 'Severity')}" />
 						
 						<g:sortableColumn property="blank" title="Action" />
 					
@@ -49,12 +49,12 @@
 							
 							<td>${fieldValue(bean: defectInstance, field: "ticket")}</td>
 						
+							<td>${fieldValue(bean: defectInstance, field: "defectSeverity")}</td>
+							
 							<td>${fieldValue(bean: defectInstance, field: "environment")}</td>
 							
 							<td>${fieldValue(bean: defectInstance, field: "defectStatus")}</td>
-						
-							<td>${fieldValue(bean: defectInstance, field: "defectSeverity")}</td>
-							
+													
 							<td>
 							
 								<g:link action="show" id="${defectInstance.id}">View</g:link>

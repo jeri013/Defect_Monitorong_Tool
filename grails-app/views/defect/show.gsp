@@ -144,13 +144,16 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${defectInstance?.resolution}">
-				<li class="fieldcontain">
-					<span id="resolution-label" class="property-label"><g:message code="defect.resolution.label" default="Resolution" /></span>
-					
-						<span class="property-value" aria-labelledby="resolution-label"><g:fieldValue bean="${defectInstance}" field="resolution"/></span>
-					
-				</li>
+				
+				<g:if test="${defectInstance?.defectStatus == 'Done' || defectInstance?.defectStatus == 'Rejected' || defectInstance?.defectStatus == 'Resolved (no fix)'}">
+					<g:if test="${defectInstance?.resolution}">
+					<li class="fieldcontain">
+						<span id="resolution-label" class="property-label"><g:message code="defect.resolution.label" default="Resolution" /></span>
+						
+							<span class="property-value" aria-labelledby="resolution-label"><g:fieldValue bean="${defectInstance}" field="resolution"/></span>
+						
+					</li>
+					</g:if>
 				</g:if>
 			
 			</ol>

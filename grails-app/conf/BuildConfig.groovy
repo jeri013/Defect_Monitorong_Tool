@@ -47,6 +47,8 @@ grails.project.dependency.resolution = {
 		runtime 'mysql:mysql-connector-java:5.1.16'
         // runtime 'mysql:mysql-connector-java:5.1.22'
 		build 'net.sourceforge.jexcelapi:jxl:2.6.12'
+		
+		runtime 'postgresql:postgresql:9.1-901-1.jdbc4'
     }
 
     plugins {
@@ -66,5 +68,8 @@ grails.project.dependency.resolution = {
 
         compile ':cache:1.0.1'
 		compile ":searchable-0.6.6"
+		
+		compile ':heroku:1.0.1'
+		compile ':cloud-support:1.0.8'
     }
 }

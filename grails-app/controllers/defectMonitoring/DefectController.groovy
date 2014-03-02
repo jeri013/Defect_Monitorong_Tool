@@ -43,7 +43,8 @@ class DefectController {
 		}
 		else
 		{
-			if(Project.count()==0){
+			def openProj = Project.findAllByStatus("OPEN")
+			if((Project.count()==0)||openProj.size()==0){
 				flash.message = "Please Create a Project First before Uploading a File."
 				redirect(controller:"Project",action: "listProjects")
 			}
@@ -233,7 +234,8 @@ class DefectController {
 		}
 		else
 		{
-			if(Project.count()==0){
+			def openProj = Project.findAllByStatus("OPEN")
+			if((Project.count()==0)||openProj.size()==0){
 				flash.message = "Please Create a Project First before Creating a New Defect."
 				redirect(controller:"Project",action: "listProjects")
 			}

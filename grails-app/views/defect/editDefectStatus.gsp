@@ -13,15 +13,18 @@
 			function changeTest() {
 				if(document.getElementById('defectStatus').value == "Done" ||document.getElementById('defectStatus').value == "Resolved (no fix)" ||document.getElementById('defectStatus').value == "Rejected")
 				{
+					document.getElementById('resolution').value=""
 					document.getElementById('resolution').disabled = false;
 					document.getElementById('resolution').style.borderColor="red"
 					document.getElementById('labelStatus').style.color="gray"
 					document.getElementById('resolution').style.color="black"
 					document.getElementById('resDiv').style.display="block"
 					
+					
 				}
 				else
 				{
+					document.getElementById('resolution').value=""
 					document.getElementById('resolution').disabled = true;
 					document.getElementById('resolution').style.borderColor="white"
 					document.getElementById('labelStatus').style.color="white"

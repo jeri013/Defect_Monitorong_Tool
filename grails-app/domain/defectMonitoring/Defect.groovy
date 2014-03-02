@@ -4,7 +4,7 @@ import java.util.Date;
 
 class Defect {
 
-	static searchable = true
+	static searchable = {except = ['id', 'version']}
     
 	String ticket
 	String defectName

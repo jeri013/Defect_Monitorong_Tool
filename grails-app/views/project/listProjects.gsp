@@ -52,7 +52,9 @@
 						<td>
 							
 								<g:link action="show" id="${projectInstance.id}">View</g:link>
-								<g:link action="editProjectInfo" id="${projectInstance.id}">Edit</g:link>
+								<g:if test="${projectInstance?.status == "OPEN"}">
+									<g:link action="editProjectInfo" id="${projectInstance.id}">Edit</g:link>
+								</g:if>
 								<g:link action="editProjectStatus" id="${projectInstance.id}">Update Status</g:link>
 						</td>
 						
